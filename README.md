@@ -20,6 +20,20 @@ Supporting internal functions:
 
 ### 1. Import the module
 
+If the module is in a custom directory (e.g. `$HOME\Projects`), make sure it's added to your PowerShell module path:
+
+```powershell
+$env:PSModulePath += ";$HOME\Projects"
+```
+
+To make this change permanent, add that line to your PowerShell profile:
+
+```powershell
+notepad $PROFILE
+```
+
+Then import the module:
+
 ```powershell
 Import-Module PwshUtils.FindApp
 ```
